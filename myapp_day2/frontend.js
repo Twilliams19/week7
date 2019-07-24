@@ -22,7 +22,7 @@ for(var i =0; i < con.length; i++){
 
     for(var Overwatch in x){
         console.log(price[1],x);
-        console.log('true');
+        console.log('got it');
     };
 };
         // go.innerHTML = con;
