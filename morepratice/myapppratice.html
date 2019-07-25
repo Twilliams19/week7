@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link href="vglistapp.css" rel="stylesheet"  type="text/css"/> -->
+    <link href="vglistapp.js"  rel="stylesheet"  type="text/js"/>
+    
+    <title>Taylor Williams Video Game wish list</title>
+</head>
+
+<body>
+      <div id="list">
+    <h1>This is a list of all Video games on XBOX</h1>
+    
+
+        <input type ="text" name="name" id="xbox">
+    
+        <input type="button" value="submit" id="sub">
+        
+
+        <div id="con"></div>
+        
+        </div>
+
+        <script>
+            function loadDoc(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        console.log(this.responseText);
+                    } else{
+                        console.log(this.status);
+                    }
+                  
+                    
+                };
+                xhttp.open("GET", "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array", true);
+                xhttp.send();
+                console.log(xhttp);
+            };
+            </script>
+<div id="fun">
+    <h3>This is the test run</h3>
+    <button type="button" onclick="loadDoc()">Press</button>
+     </div>
+        <!-- <button class="submit">submit</button>  -->
+</body>
+<!-- <script src="main.js"></script> -->
+<script type="text/javascript" src="myapppratice.js"></script>
+</html>
