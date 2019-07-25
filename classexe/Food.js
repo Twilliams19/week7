@@ -1,9 +1,10 @@
+// var{server} = require('./server');
 console.log("Can I take Your order");
 window.onload = function(){
 
 var input = document.querySelector("input");
 var button = document.querySelector("button");
-
+var submit = document.querySelector(".submit");
     var menu = {
        "fries": 10,
        "shakes": 8,

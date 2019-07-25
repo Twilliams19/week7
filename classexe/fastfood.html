@@ -5,11 +5,11 @@
     <title>Fast Food Order</title>
     <!-- <link rel="stylesheet" href="css/Food.css"> -->
     <script type="text/javascript" src="Food.js"></script>
-    <!-- <script type="text/javascript" src="foodserver.js"></script> -->
+    <script type="text/javascript" src="ajax.js"></script>
 </head>
 <body>
     <input type="text" value="1: fries , 2: shakes"/>
-    <button class="submit">Order</button>
+    <button type="submit">Order</button>
     <p>Please format your order this way: 1: fries , 2: shakes</p>
 
  <!-- <textarea class="fries"></textarea> <h3>Fries</h3>
@@ -21,22 +21,5 @@
 <button type="button" onclick="loadDoc()">Press</button>
  </div>
 
- <script>
- function loadDoc(){
-     var xhttp = new XMLHttpRequest();
-     xhttp.onreadystatechange = function(){
-         if (this.readyState == 4 && this.status == 200){
-             console.log(this.responseText);
-         } else{
-             console.log(this.status);
-         }
-       
-         
-     };
-     xhttp.open("GET", "https://raw.githubusercontent.com/Ruffinsan03/MyFirstApp/master/README.md", true);
-     xhttp.send();
-     console.log(xhttp);
- };
- </script>
 </body>
 </html>
