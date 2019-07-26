@@ -4,31 +4,55 @@ window.onload=function(){
     var xbox = document.querySelector("#xbox");
     var sub = document.querySelector("#sub");
     var go = document.querySelector("#con");
-    // var button = document.querySelector("sub");
-var x ={ "Overwatch": 25.00,
-        "Halo": 50.00,
-        "Madden": 30.00}; 
+    var button = document.querySelector("#sub");
 
-    sub.addEventListener("click", function(){
+    var games ={ Overwatch: 25.00,
+        Halo: 50.00,
+        Madden: 30.00,
+        GearofWar: 40.00}; 
+
+    button.addEventListener("click", function(){
         
-    
         var mygame = xbox.value;
-       var price = mygame.split(", ");
-for(var i =0; i < price.length; i++){
-    var aim = price[i].split(":");
-    var a = Object.keys(x)
-    var z = Object.value(x)
-    for(counter=0; counter < a.length; counter++){
+        var myfav = mygame.split(", ");
+        
+        for(var i =0; i < myfav.length; i++){
+            var mydiv = myfav[i].split(":");
+            
+            for (var gametitle in games){
+                console.log(gametitle);
+            } 
+            var gameskeys = Object.keys(games)
+            // var z = Object.value(games)
+            for(counter=0; counter < gameskeys.length; counter++){
 
-        if(a[counter] == aim[0]){
-            var remainder = z[counter] - aim[1];
-            console.log(remainder);
-        }
-    }
-      
-    };
-});
-        // go.innerHTML = con;
-        // console.log(con);
-        // xbox.value="";
+                if(gameskeys[counter] == mydiv[0]){
+                    var remainder = [counter] - mydiv[1];
+                    console.log(remainder);
+                }
+            }
+        
+        };
+        
+        function loadDoc(){
+            var ro = new XMLHttpRequest();
+            ro.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                } else{
+                    console.log(this.status);
+                }
+            
+                
+            };
+            ro.open("GET", "https://localhost:8080");
+            ro.send();
+            console.log(ro);
+        };
+        loadDoc();
+    });
+        go.innerHTML = games;
+        console.log(Object.values(games));
+        xbox.value="";
+         
     };
