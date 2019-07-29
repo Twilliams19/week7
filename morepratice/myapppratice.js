@@ -18,8 +18,11 @@ window.onload=function(){
        for(var gametitle in games) {
            mygame = games[gametitle];
                console.log(games);
+               for(var i = 0 )
        }
-       
+       for (var i = 0; i < mygame.length; i++){
+           var games = mygames
+       }
    }
 )};
         
