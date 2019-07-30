@@ -1,0 +1,51 @@
+mysql> my create database video_games
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'my create database video_games' at line 1
+mysql> shoe databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'shoe databases' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| attendance         |
+| mysql              |
+| performance_schema |
+| states             |
+| sys                |
+| videogamelist      |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> create database video_game;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use video_game;
+Database changed
+mysql> create table xbox;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table xbox;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table xbox(game_name VARCHAR(20), game_price int(10));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
++----------------------+
+| Tables_in_video_game |
++----------------------+
+| xbox                 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> describe xbox;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| game_name  | varchar(20) | YES  |     | NULL    |       |
+| game_price | int(10)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+mysql> 
