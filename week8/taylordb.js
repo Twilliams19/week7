@@ -2,10 +2,17 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root'
+    password: 'root',
+    database: "video_game",
 
 });
 
-con.connect(function(err){
-    if (err) throw err;
+function get_all_xbox(){
+    conection.connect(function(err){
+        if (err) throw err;
+        conection.query("SELECT * FROM xbox", function(err,result){
+     if (err) throw err;
+ console.log(result);
+        });
+    });
 }

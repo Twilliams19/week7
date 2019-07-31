@@ -49,3 +49,54 @@ mysql> describe xbox;
 2 rows in set (0.02 sec)
 
 mysql> 
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| attendance         |
+| mysql              |
+| performance_schema |
+| states             |
+| sys                |
+| video_game         |
+| videogamelist      |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> use video_game
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_video_game |
++----------------------+
+| xbox                 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> describe xbox;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| game_name  | varchar(20) | YES  |     | NULL    |       |
+| game_price | int(10)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE xbox ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe xbox;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| game_name  | varchar(20) | YES  |     | NULL    |                |
+| game_price | int(10)     | YES  |     | NULL    |                |
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
++------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
