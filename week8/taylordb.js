@@ -16,3 +16,5 @@ function get_all_xbox(){
         });
     });
 }
+
+module.exports.get_all_xbox = get_all_xbox;

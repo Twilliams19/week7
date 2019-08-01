@@ -100,3 +100,44 @@ mysql> describe xbox;
 +------------+-------------+------+-----+---------+----------------+
 3 rows in set (0.00 sec)
 
++----------------------+
+| Tables_in_video_game |
++----------------------+
+| xbox                 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> describe xbox;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| game_name  | varchar(20) | YES  |     | NULL    |                |
+| game_price | int(10)     | YES  |     | NULL    |                |
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
++------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> insert into xbox;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> insert into xbox
+    -> (game_name, game_price) values('Halo', '50.00');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> describe xbox;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| game_name  | varchar(20) | YES  |     | NULL    |                |
+| game_price | int(10)     | YES  |     | NULL    |                |
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
++------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from xbox;
++-----------+------------+----+
+| game_name | game_price | id |
++-----------+------------+----+
+| Halo      |         50 |  1 |
++-----------+------------+----+
+1 row in set (0.01 sec)
+
