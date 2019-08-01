@@ -25,8 +25,12 @@ window.onload=function(){
        }
    }
 )};
-        
-     
+        function checkgame(){
+            alert("This game is checked off the list");
+        }
+     function notgame(){
+         alert("this game is not on the list");
+     }
             
                 
     // });
