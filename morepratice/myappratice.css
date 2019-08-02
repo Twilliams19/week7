@@ -13,11 +13,12 @@ body{
 .webpage{
 float: left; 
 width: 50%;
-margin: 0px;
+background-color: gold;
 
 }
 
 .amazon{
-float: left;
+float: right;
 width: 50%;
+background-color: red; 
 }
