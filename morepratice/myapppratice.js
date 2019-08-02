@@ -9,7 +9,7 @@ window.onload=function(){
         Overwatch: "25.00",
         Halo: "50.00",
         Madden: "30.00",
-        GearsofWar: "40.00",
+        Gears_of_War: "40.00",
         Fortnight: "50.00"
         };
        var mygame = xbox.value;
