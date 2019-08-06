@@ -45,23 +45,6 @@ window.onload=function(){
      }
             
                 
-    // });
-    //         ro.open("GET", "https://localhost:5500");
-    //         ro.send();
-    //         console.log(ro);
-    //     };
-        
+   
     
-    //     go.innerHTML = games;
-    //     console.log(Object.values(games));
-    //     xbox.value="";
-    // var http = require('http');
 
-    // var myserver = http.createServer(function(req, res){
-    //     console.log('request was made:' + req.url);
-    //     res.writeHead(200, {'Content-Type' : 'text/plain'});
-    //     res.end('This is it Gammer');
-    // });
-    // myserver.listen(5500,'127.0.0.1');
-    // console.log('now connected');
-    
