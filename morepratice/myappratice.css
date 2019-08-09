@@ -1,5 +1,5 @@
 
-html{
+body{
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrN_VkwZfMr1Q69OoYHEZ7UiG3Tl-upfZ0HHVY1lWgoEuva0Gk);
     color: rgb(145, 49, 49);
 }
@@ -30,6 +30,6 @@ margin-bottom: 50px;
 
 .notfound{
     color: rgb(38, 9, 92);
-    font-size: 70px;
+    font-size: 100px;
     
 }
