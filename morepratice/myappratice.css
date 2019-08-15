@@ -12,7 +12,7 @@ body{
 
 .webpage{
 float: left; 
-width: 30%;
+width: 20%;
 background-color: rgb(160, 149, 64);
 border: solid black;
 padding: 40px; 
@@ -21,7 +21,7 @@ margin-bottom: 80px;
 
 .amazon{
 float: right;
-width: 30%;
+width: 20%;
 background-color: rgb(228, 219, 219); 
 border: solid black;
 padding: 40px;
